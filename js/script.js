@@ -160,11 +160,11 @@ function pageScroll()
 // Listen for Key Presses on Body
 function navigate(evt)
 {
-	var space = 32,
+	var space = 190,
 		escape = 27,
-		left = 37,
+		left = 33,
 		up = 38,
-		right = 39,
+		right = 34,
 		down = 40,
 		speed = $('.speed').slider('value'),
 		font_size = $('.font_size').slider('value');
@@ -200,7 +200,7 @@ function navigate(evt)
 	// Decrease Speed with Left Arrow
 	else if(evt.keyCode == left)
 	{
-		$('.speed').slider('value', speed-1);
+		$('.speed').slider('value', speed-5);
 		evt.preventDefault();
 		evt.stopPropagation();
 		return false;
@@ -224,7 +224,7 @@ function navigate(evt)
 	// Increase Speed with Right Arrow
 	else if(evt.keyCode == right)
 	{
-		$('.speed').slider('value', speed+1);
+		$('.speed').slider('value', speed+5);
 		evt.preventDefault();
 		evt.stopPropagation();
 		return false;
